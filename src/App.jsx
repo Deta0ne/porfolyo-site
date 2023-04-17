@@ -18,22 +18,26 @@ import "./App.css";
 import "./styles/projects.css";
 import "./styles/skills.css";
 import "./styles/experience.css";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
     <Router>
       <Header />
-      <main className="page-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div className="content-wrap">
+        <main className="page-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+      <ScrollToTopButton />
     </Router>
   );
 }
