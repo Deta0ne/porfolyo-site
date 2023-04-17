@@ -18,14 +18,14 @@ const Footer = () => {
           <AiFillInstagram className="social-icon" />
         </a>
         <a
-          href="https://twitter.com/ConstMert"
+          href="https://twitter.com/your_username"
           target="_blank"
           rel="noreferrer"
         >
           <AiFillTwitterCircle className="social-icon" />
         </a>
         <a
-          href="https://www.linkedin.com/in/mert-y%C4%B1ld%C4%B1z-60b519227/"
+          href="https://www.linkedin.com/your_username"
           target="_blank"
           rel="noreferrer"
         >
