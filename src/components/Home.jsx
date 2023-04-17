@@ -23,7 +23,7 @@ const Home = () => {
     }
   }, [imageData]);
 
-  const jobTitles = ["Designer", "Software Engineer"];
+  const jobTitles = ["Designer", "Software Engineer", "Developer"];
   const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
 
   useEffect(() => {
