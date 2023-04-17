@@ -27,63 +27,12 @@
     color: rgb(255, 170, 0);
   }
 }
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  50%,
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blinkingCursor {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-
-.typewriter-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1; /* Yazıyı resmin önüne getirin */
-}
-.typewriter {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  animation: typing 6s steps(20, end) infinite;
-  margin-top: 100px;
-}
-
-.typewriter:before {
-  content: "I'm ";
-  white-space: pre-wrap;
-}
-
-.typewriter:after {
-  content: "|";
-  position: absolute;
-  animation: blinkingCursor 1s infinite;
-}
 
 .home-container {
   position: relative;
   height: calc(100% - 80px);
   overflow: hidden;
-  background-color: #f5f5f5; /* İsteğe bağlı olarak arka plan rengi ekleyin */
+  background-color: #f5f5f5;
 }
 
 .home-title {
@@ -93,16 +42,43 @@
   transform: translate(-50%, -50%);
   font-size: 3rem;
   font-weight: 600;
-  color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* İsteğe bağlı olarak metin gölgesi ekleyin */
-  z-index: 1; /* Yazıyı resmin önüne getirin */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
   animation: rainbowText 5s linear infinite;
 }
-.home-title2 {
+
+.typewriter-container {
   position: absolute;
   top: 40%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.typewriter {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-right: 0.2em solid #fff;
+  animation: rainbowText 5s linear infinite;
+  margin-top: 30px;
+}
+
+.typewriter:before {
+  content: "I'm ";
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 0.2em;
+  height: 1em;
+  background-color: #fff;
+  animation: blink 1s step-end infinite;
 }
 
 .random-image {

@@ -23,15 +23,35 @@ const Home = () => {
     }
   }, [imageData]);
 
-  const jobTitles = ["Software Engineer", "Designer"];
-  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const jobTitles = ["Designer", "Software Engineer"];
+  const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % jobTitles.length);
-    }, 6000);
+    let timer;
+    const typeTitle = async (title, index) => {
+      if (index < title.length) {
+        setCurrentTitle((prevTitle) => prevTitle + title[index]);
+        timer = setTimeout(() => typeTitle(title, index + 1), 150);
+      } else {
+        timer = setTimeout(() => deleteTitle(title, index - 1), 1000);
+      }
+    };
+
+    const deleteTitle = async (title, index) => {
+      if (index >= 0) {
+        setCurrentTitle((prevTitle) => prevTitle.slice(0, index));
+        timer = setTimeout(() => deleteTitle(title, index - 1), 150);
+      } else {
+        const nextTitleIndex =
+          (jobTitles.indexOf(title) + 1) % jobTitles.length;
+        timer = setTimeout(() => typeTitle(jobTitles[nextTitleIndex], 0), 500);
+      }
+    };
+
+    typeTitle(currentTitle, 0);
+
     return () => clearTimeout(timer);
-  }, [currentTitleIndex]);
+  }, []);
 
   const fetchImages = async () => {
     try {
@@ -58,7 +78,8 @@ const Home = () => {
     <div className="home-container">
       <h1 className="home-title">Welcome to my portfolio</h1>
       <div className="typewriter-container">
-        <span className="typewriter">{jobTitles[currentTitleIndex]}</span>
+        <span className="typewriter">{currentTitle}</span>
+        <span className="blinking-cursor" />
       </div>
       {imageData.images.length > 0 && (
         <img
