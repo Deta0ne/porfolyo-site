@@ -57,8 +57,8 @@ const Home = () => {
   return (
     <div className="home-container">
       <h1 className="home-title">Welcome to my portfolio</h1>
-      <div className="home-title2">
-        <h1 className="home-title">Merhaba</h1>
+      <div className="typewriter-container">
+        <span className="typewriter">{jobTitles[currentTitleIndex]}</span>
       </div>
       {imageData.images.length > 0 && (
         <img

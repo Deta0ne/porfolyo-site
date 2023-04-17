@@ -27,6 +27,57 @@
     color: rgb(255, 170, 0);
   }
 }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50%,
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinkingCursor {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.typewriter-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* Yazıyı resmin önüne getirin */
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  animation: typing 6s steps(20, end) infinite;
+  margin-top: 100px;
+}
+
+.typewriter:before {
+  content: "I'm ";
+  white-space: pre-wrap;
+}
+
+.typewriter:after {
+  content: "|";
+  position: absolute;
+  animation: blinkingCursor 1s infinite;
+}
 
 .home-container {
   position: relative;
