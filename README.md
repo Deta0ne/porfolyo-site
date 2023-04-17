@@ -6,4 +6,6 @@ The site is using the old react-dom version because it was made with ChatGPT. So
 
 Lastly, the site is not responsive and optimized.
 
-Start: npm run dev
+Start: 
+npm install
+npm run dev
