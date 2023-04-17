@@ -23,6 +23,16 @@ const Home = () => {
     }
   }, [imageData]);
 
+  const jobTitles = ["Software Engineer", "Designer"];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % jobTitles.length);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, [currentTitleIndex]);
+
   const fetchImages = async () => {
     try {
       const response = await axios.get(
@@ -47,6 +57,9 @@ const Home = () => {
   return (
     <div className="home-container">
       <h1 className="home-title">Welcome to my portfolio</h1>
+      <div className="home-title2">
+        <h1 className="home-title">Merhaba</h1>
+      </div>
       {imageData.images.length > 0 && (
         <img
           className="random-image"

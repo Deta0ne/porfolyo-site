@@ -48,6 +48,11 @@
   z-index: 1; /* Yazıyı resmin önüne getirin */
   animation: rainbowText 5s linear infinite;
 }
+.home-title2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
 
 .random-image {
   width: 100%;
