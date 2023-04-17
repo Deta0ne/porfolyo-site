@@ -4,28 +4,28 @@ import React from "react";
 const skillsData = [
   {
     name: "Python",
-    logo: "/public/Images/python-logo.png",
+    logo: "/Images/python-logo.png",
     level: "İleri",
     percentage: "40%",
     color: "#e74c3c", // Kırmızı renk
   },
   {
     name: "JavaScript",
-    logo: "/public/Images/javascript-logo.png",
+    logo: "/Images/javascript-logo.png",
     level: "Başlangıç",
     percentage: "50%",
     color: "#f1c40f", // Sarı renk
   },
   {
     name: "HTML",
-    logo: "/public/Images/html-logo.png",
+    logo: "/Images/html-logo.png",
     level: "İleri",
     percentage: "90%",
     color: "#2ecc71", // Yeşil renk
   },
   {
     name: "CSS",
-    logo: "/public/Images/css-logo.png",
+    logo: "/Images/css-logo.png",
     level: "İleri",
     percentage: "80%",
     color: "#2ecc71", // Yeşil renk

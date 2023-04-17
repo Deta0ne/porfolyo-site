@@ -1,11 +1,11 @@
-/* src/styles/header.css */
 .header-container {
-  background-color: rgb(69, 69, 69, 0.8);
+  background-color: rgba(69, 69, 69, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -16,14 +16,23 @@
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
+  padding: 0 1rem;
 }
 
 .nav-item {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .nav-item:hover {
-  color: #60ccdf;
+  color: #ffe6c7;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  color: #ff6000;
+  border-bottom: 2px solid #ffa559;
 }

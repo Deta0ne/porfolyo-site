@@ -6,31 +6,31 @@ const projectsData = [
     title: "Proje 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/public/Images/3.jpg",
+    imageUrl: "/Images/3.jpg",
   },
   {
     title: "Proje 2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/public/Images/4.jpg",
+    imageUrl: "/Images/4.jpg",
   },
   {
     title: "Proje 3",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/public/Images/5.jpg",
+    imageUrl: "/Images/5.jpg",
   },
   {
     title: "Proje 4",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/public/Images/1.jpg",
+    imageUrl: "/Images/1.jpg",
   },
   {
     title: "Proje 5",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/public/Images/2.jpg",
+    imageUrl: "/Images/2.jpg",
   },
 ];
 

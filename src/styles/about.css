@@ -1,7 +1,7 @@
 /* src/styles/about.css */
 .about-container {
   position: relative;
-  background-image: url("/public/Images/0_0_1.jpg");
+  background-image: url("/Images/0_0_1.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;

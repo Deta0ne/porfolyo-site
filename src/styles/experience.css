@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
-  background-image: url("/public/Images/i3.jpg"); /* Fotoğrafınızın yolunu buraya yazın */
+  background-image: url("/Images/i3.jpg"); /* Fotoğrafınızın yolunu buraya yazın */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
