@@ -1,0 +1,115 @@
+.experience-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url("/public/Images/i3.jpg"); /* Fotoğrafınızın yolunu buraya yazın */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  background-color: rgb(
+    255,
+    230,
+    199,
+    0.5
+  ); /* Beyaz arka plan ve %80 opaklık */
+  padding: 2rem;
+  border-radius: 10px; /* Köşeleri yuvarlat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyin */
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #ccc;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  justify-content: flex-end;
+}
+.timeline-item.left:hover {
+  transform: translateX(+50px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.timeline-item.right {
+  justify-content: flex-start;
+}
+.timeline-item.right:hover {
+  transform: translateX(-50px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-year {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ccc;
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  padding-left: 60px;
+  border-left: 1px solid #ccc;
+  max-width: 39%;
+}
+
+.timeline-item.left .timeline-content {
+  padding-left: 0;
+  border-left: none;
+  border-right: 1px solid #ccc;
+}
+
+.timeline-arrow {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.timeline-item.left .timeline-arrow {
+  right: 50%;
+  margin-right: -7px;
+}
+
+.timeline-item.right .timeline-arrow {
+  left: 50%;
+  margin-left: -7px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.timeline-content h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.timeline-content p {
+  margin: 0;
+}

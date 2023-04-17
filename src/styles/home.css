@@ -1,0 +1,65 @@
+@keyframes rainbowText {
+  0% {
+    color: red;
+  }
+  7% {
+    color: rgb(134, 193, 227);
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: rgb(247, 145, 213);
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: rgb(255, 170, 0);
+  }
+}
+
+.home-container {
+  position: relative;
+  height: calc(100% - 80px);
+  overflow: hidden;
+  background-color: #f5f5f5; /* İsteğe bağlı olarak arka plan rengi ekleyin */
+}
+
+.home-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* İsteğe bağlı olarak metin gölgesi ekleyin */
+  z-index: 1; /* Yazıyı resmin önüne getirin */
+  animation: rainbowText 5s linear infinite;
+}
+
+.random-image {
+  width: 100%;
+  max-height: 86vh;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.9;
+}
+
+.random-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}

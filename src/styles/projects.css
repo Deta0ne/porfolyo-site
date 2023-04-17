@@ -1,0 +1,65 @@
+/* src/styles/projects.css */
+.projects-container {
+  padding: 5.8rem;
+  background-image: url("/public/Images/3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-item {
+  display: flex;
+  gap: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Beyaz arka plan ve %50 opaklık */
+}
+
+.project-item.expanded {
+  height: auto;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: #fdf5f5;
+  flex-grow: 1;
+}
+
+.project-details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #fdf5f5;
+}
+
+.project-details p {
+  margin: 0;
+  color: #c3baba;
+  transition: height 0.3s;
+}
