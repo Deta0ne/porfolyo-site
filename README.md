@@ -6,7 +6,7 @@ The site is using the old react-dom version because it was made with ChatGPT. So
 
 Lastly, the site is not responsive and optimized.
 
-Finally: ReactDOM Router replaced with the latest version.
+Edit ReadMe: ReactDOM Router replaced with the latest version.
 
 Start:
 npm install
