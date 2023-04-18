@@ -23,8 +23,29 @@ const Home = () => {
     }
   }, [imageData]);
 
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.unsplash.com/search/photos",
+        {
+          params: {
+            query: "software",
+            per_page: 10,
+          },
+          headers: {
+            Authorization:
+              "Client-ID gxjXa7XvXl-Fd4l3IlANj6ExoYPDl5b_iSR_1O2ejmw",
+          },
+        }
+      );
+      setImageData({ images: response.data.results, current_index: 0 });
+    } catch (error) {
+      console.error("Error fetching images:", error);
+    }
+  };
+
   const jobTitles = ["Designer", "Software Engineer", "Developer"];
-  const [currentTitle, setCurrentTitle] = useState(jobTitles[0]);
+  const [currentTitle, setCurrentTitle] = useState("");
 
   useEffect(() => {
     let timer;
@@ -52,27 +73,6 @@ const Home = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const fetchImages = async () => {
-    try {
-      const response = await axios.get(
-        "https://api.unsplash.com/search/photos",
-        {
-          params: {
-            query: "software",
-            per_page: 10,
-          },
-          headers: {
-            Authorization:
-              "Client-ID gxjXa7XvXl-Fd4l3IlANj6ExoYPDl5b_iSR_1O2ejmw",
-          },
-        }
-      );
-      setImageData({ images: response.data.results, current_index: 0 });
-    } catch (error) {
-      console.error("Error fetching images:", error);
-    }
-  };
 
   return (
     <div className="home-container">
