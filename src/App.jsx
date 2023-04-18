@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
@@ -22,7 +23,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
-    <Router>
+    <div>
       <Header />
       <div className="content-wrap">
         <main className="page-content">
@@ -38,7 +39,7 @@ function App() {
         <Footer />
       </div>
       <ScrollToTopButton />
-    </Router>
+    </div>
   );
 }
 
