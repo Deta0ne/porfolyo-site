@@ -45,7 +45,7 @@
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  animation: rainbowText 5s linear infinite;
+  color: #ffe6c7;
 }
 
 .typewriter-container {
@@ -64,7 +64,7 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
   border-right: 0.2em solid #fff;
-  animation: rainbowText 5s linear infinite;
+  color: #ffe6c7;
   margin-top: 30px;
 }
 
